@@ -5,8 +5,10 @@ class Solution {
 
         while(l<=h) {
             int m = (l+h)/2;
+
             if(nums[m] == target)
                 return m;
+
             if(nums[l] <= nums[m]) {
                 if(nums[l] <= target && target <= nums[m]) {
                     h = m-1;

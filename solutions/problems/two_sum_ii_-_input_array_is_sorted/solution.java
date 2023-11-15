@@ -2,12 +2,11 @@ class Solution {
     public int[] twoSum(int[] numbers, int target) {
         int len = numbers.length;
         int i = 0;
-        int j = len -1;
-        while(j >= i) {
-            int sum = numbers[i] + numbers[j];
-            if(sum == target)
+        int j = len-1;
+        while(i<j) {
+            if(numbers[i] + numbers[j] == target)
                 return new int[]{i+1, j+1};
-            else if(sum > target)
+            else if(numbers[i] + numbers[j] > target)
                 j--;
             else
                 i++;
